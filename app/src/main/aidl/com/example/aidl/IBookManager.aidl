@@ -1,0 +1,12 @@
+// IBookManager.aidl
+//第二类AIDL文件的例子
+package com.example.aidl;
+
+//导入所需要使用的非默认支持数据类型的包
+import com.example.aidl.Book;
+interface IBookManager {
+    //所有的返回值前都不需要加任何东西，不管是什么数据类型
+    List<Book> getBookList();
+    //传参时除了Java基本类型以及String，CharSequence之外的类型都需要在前面加上定向tag，具体加什么量需而定
+    void addBook(in Book book);
+}
